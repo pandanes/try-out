@@ -1,5 +1,4 @@
 const cart = [];
-var total = 0;
 
 var daftarProduk = [ 
     { 
@@ -59,9 +58,9 @@ function displayCart(){
         html1+="<td>"+cart[i].product_price+"</td>";
         html1+="<td>"+cart[i].product_qty+"</td>";
         html1+="</tr>";
-        total =+ cart[i].product_price;
+        //total =+ cart[i].product_price;
     }  
-    html1+="</table><br> total =" + total;;
+    html1+="</table>";
     document.getElementById("cart").innerHTML = html1;         	
 }
 
@@ -84,7 +83,19 @@ function addItem(){
 
     cart.push(newProduct);
     displayCart();
+    grandTotal();
         
+}
+
+//display grand total
+function grandTotal(){
+    var total = 0;
+    for (var i = 0; i < cart.length; i++) {
+            total += cart[i].product_price;
+            }
+    
+    var html = "<br>Total = " + total;
+    document.getElementById("total").innerHTML = html;
 }
 
 displayProducts();
