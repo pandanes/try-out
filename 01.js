@@ -3,6 +3,3 @@ function reverseString(str) {
     }
 
 reverseString("ibu ratna antar ubi");
-
-//to test:
-//console.log(reverseString);
