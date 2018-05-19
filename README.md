@@ -1,4 +1,3 @@
 # try-out
-tes isi satu
-testing branching
+Try out Refactory pre-Preparation phase.
 
